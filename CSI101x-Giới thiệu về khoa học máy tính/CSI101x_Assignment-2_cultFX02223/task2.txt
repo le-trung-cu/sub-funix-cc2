@@ -1,0 +1,22 @@
+image = new SimpleImage("moon.jpg");
+avgR = avgG = avgB = 0
+for(pixel:image){
+  avgR += pixel.getRed();
+  avgG += pixel.getGreen();
+  avgB += pixel.getBlue();
+}
+s = image.getHeight()*image.getWidth();
+avgR = avgR/s;
+avgG = avgG/s;
+avgB = avgB/s;
+avg = (avgR + avgG + avgB)/3;
+print("Average Red: " + avgR);
+print("Average Green: " + avgG);
+print("Average Blue: " + avgB);
+if(avg < 100){
+ print("Too dark");
+}else if(avg > 155){
+ print("Too kight");
+}else{
+ print("Normal");
+}

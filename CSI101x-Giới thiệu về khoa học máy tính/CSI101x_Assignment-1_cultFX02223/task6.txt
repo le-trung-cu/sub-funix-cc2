@@ -1,0 +1,6 @@
+image = new SimpleImage("flowers.jpg");
+print(image);
+for(pixel:image){
+  pixel.setGreen(0);
+}
+print(image);

@@ -1,0 +1,107 @@
+
+<!-- saved from url=(0067)https://web.stanford.edu/class/cs101/image-functions-reference.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Image Functions Reference</title>
+<link rel="stylesheet" href="./Image Functions Reference_files/style.css" type="text/css">
+
+<style type="text/css" data-styled-components="FiaaB gTcftA caPIRE" data-styled-components-is-local="true">
+/* sc-component-id: sc-keyframes-FiaaB */
+@-webkit-keyframes FiaaB{100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}@keyframes FiaaB{100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}
+/* sc-component-id: sc-keyframes-gTcftA */
+@-webkit-keyframes gTcftA{10%,90%{-webkit-transform:translate3d(-1px,0,0);-ms-transform:translate3d(-1px,0,0);transform:translate3d(-1px,0,0);}20%,80%{-webkit-transform:translate3d(2px,0,0);-ms-transform:translate3d(2px,0,0);transform:translate3d(2px,0,0);}30%,50%,70%{-webkit-transform:translate3d(-4px,0,0);-ms-transform:translate3d(-4px,0,0);transform:translate3d(-4px,0,0);}40%,60%{-webkit-transform:translate3d(4px,0,0);-ms-transform:translate3d(4px,0,0);transform:translate3d(4px,0,0);}}@keyframes gTcftA{10%,90%{-webkit-transform:translate3d(-1px,0,0);-ms-transform:translate3d(-1px,0,0);transform:translate3d(-1px,0,0);}20%,80%{-webkit-transform:translate3d(2px,0,0);-ms-transform:translate3d(2px,0,0);transform:translate3d(2px,0,0);}30%,50%,70%{-webkit-transform:translate3d(-4px,0,0);-ms-transform:translate3d(-4px,0,0);transform:translate3d(-4px,0,0);}40%,60%{-webkit-transform:translate3d(4px,0,0);-ms-transform:translate3d(4px,0,0);transform:translate3d(4px,0,0);}}
+/* sc-component-id: sc-keyframes-caPIRE */
+@-webkit-keyframes caPIRE{0%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}20%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}40%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}60%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}80%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}100%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}}@keyframes caPIRE{0%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}20%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}40%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}60%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}80%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}100%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}}</style><style>
+      .glot-sub-active{
+        color: #1296ba !important;
+      }
+      
+      .glot-sub-hovered{
+        color: #1296ba !important;
+      }
+      .glot-sub-clzz{
+        cursor: pointer;
+      }
+      .glot-sub-clzz:hover{
+        color: #1296ba !important;
+      }
+      </style></head>
+<body>
+<script type="text/javascript" src="./Image Functions Reference_files/cs101.js.download"></script>
+<script type="text/javascript" src="./Image Functions Reference_files/cs101-table.js.download"></script>
+
+<!--endhead-->
+<h1>Image Functions Reference</h1>
+<p> &lt; <a href="https://web.stanford.edu/class/cs101/index.html">CS101</a>
+
+</p><p>
+
+
+</p><p>For reference, here are all the functions, such as <code>pixel.setRed(<i>number</i>);</code> to load and manipulate images.
+
+<table class="tab">
+
+<tbody><tr><td width="50%"><code>image = new SimpleImage("flowers.jpg");</code></td>
+<td>Set the variable <i>image</i> to hold the "flowers.jpg" image</td></tr>
+
+<tr><td><code>image.setZoom(5);</code></td>
+<td>Set the image to print at 5x size on screen. Useful to make changes on very small images such as "x.png" visible.</td></tr>
+
+<tr><td><code>print(image);</code></td>
+<td>Print the image to the screen.</td></tr>
+
+<tr><td><code>pixel = image.getPixel(0, 0);</code></td>
+<td>Retrieve the pixel at x,y (0, 0) and store it in a variable named <i>pixel</i> (i.e. the upper left pixel). Changes on that pixel, e.g. <code>pixel.setRed(255);</code>, change the pixel in the original image.</td></tr>
+
+<tr><td><code>print(pixel);</code></td>
+<td>Print the values for one pixel, in the format "r:200 g:12 b:166"</td></tr>
+
+<tr><td>
+<code>pixel.setRed(<i>number</i>);
+<br>pixel.setGreen(<i>number</i>);
+<br>pixel.setBlue(<i>number</i>);
+</code></td>
+<td>Change the pixel's red value to be 255 (we can specify any value 0..255 within the parenthesis). There are analogous functions <code>pixel.setGreen(<i>number</i>);</code> and <code>pixel.setBlue(<i>number</i>);</code>for the other colors. If the number is outside the range 0..255, it is automatically limited to 0 or 255. </td></tr>
+
+<tr><td>
+<code>r = pixel.getRed();
+<br>g = pixel.getGreen();
+<br>b = pixel.getBlue();
+</code></td>
+<td>Retrieve the red value from a pixel (a number in the range 0..255), and store it in a variable named <i>r</i>. There are analogous functions <code>pixel.getGreen()</code> and <code>pixel.getBlue()</code> for the other colors.</td></tr>
+
+<tr><td><code>image.getWidth()</code>, <code>image.getHeight()</code></td>
+<td>Retrieve the width and height of an image.</td></tr>
+
+<tr><td><code>image.setSize(width, height);</code></td>
+<td>Scale an image up or down in size so it has the given width and height.</td></tr>
+
+<tr><td><code>image.setAsBig(<it>other_image);</it></code></td>
+<td>Scale an image up or down in size, keeping its proportions, so it is at least as big as the <i>other_image</i> specified. Useful for bluescreen code where we want to make the background at least as big as the foreground. Previously this function was called "setSameSize", so you may see that name used in older code examples (it still works).</td></tr>
+
+</tbody></table>
+
+
+</p><h2>Code Area</h2>
+
+<p>Here's a scratch area to try out code.
+</p><div class="runparent">
+<!-- CODE -->
+<div class="runcode">
+<textarea id="image-ref-1" rows="17" cols="70" class="tacode" spellcheck="false" onkeypress="return handleCR(this ,event)">image = new SimpleImage("flowers.jpg");
+
+print(image);</textarea>
+
+<br><input type="button" style="width:220px;height:40px;background-color:lightgray" value="Run" onclick="evaluateClear(&quot;image-ref-1&quot;)">
+<div style="float: right;">image-ref-1</div>
+</div>
+<!-- OUTPUT -->
+<div id="image-ref-1-output" class="runout"><img id="img46" src="./Image Functions Reference_files/moon.jpg" style="display:none" onload="postImage(this);" onerror="errorImage(this);"><canvas id="canvas47" style="display:none" width="600" height="450"></canvas><canvas id="canvas48" width="600" height="450" imdata="true"></canvas><text><br></text><canvas id="canvas49" width="600" height="450" imdata="true"></canvas><text><br></text></div>
+</div>
+<p style="clear: both;">&nbsp;</p> <!-- stop being floaty --> 
+
+
+
+
+
+
+<div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div><iframe id="nr-ext-rsicon" style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;" src="./Image Functions Reference_files/saved_resource.html"></iframe></body></html>

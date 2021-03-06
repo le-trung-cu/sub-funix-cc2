@@ -1,0 +1,12 @@
+image = new SimpleImage("moon.jpg");
+print(image);
+for(pixel:image){
+  if(pixel.getRed() == 0 && 
+    pixel.getGreen() == 0 && 
+    pixel.getBlue() == 0){
+     pixel.setRed(255);
+     pixel.setGreen(255);
+     pixel.setBlue(255);
+ }
+}
+print(image);
